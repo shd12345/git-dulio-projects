@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/37/trunk/demos/calc-cli
+END
+calc
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/37/trunk/demos/calc-cli/calc
+END
+io.o
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/37/trunk/demos/calc-cli/io.o
+END
+main.c
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/37/trunk/demos/calc-cli/main.c
+END
+libcalc.o
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/37/trunk/demos/calc-cli/libcalc.o
+END
+io.c
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/37/trunk/demos/calc-cli/io.c
+END
+libcalc.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/37/trunk/demos/calc-cli/libcalc.c
+END
+getop.o
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/37/trunk/demos/calc-cli/getop.o
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/37/trunk/demos/calc-cli/Makefile
+END
+getop.c
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/37/trunk/demos/calc-cli/getop.c
+END
