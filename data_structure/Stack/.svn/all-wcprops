@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/34/trunk/data_structure/Stack
+END
+stack.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/34/trunk/data_structure/Stack/stack.c
+END
+stack.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/34/trunk/data_structure/Stack/stack.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/34/trunk/data_structure/Stack/Makefile
+END
+main.c
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/34/trunk/data_structure/Stack/main.c
+END

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/34/trunk/data_structure/Two-WayLinkedList
+END
+list.h
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/34/trunk/data_structure/Two-WayLinkedList/list.h
+END
+linkedlist
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/34/trunk/data_structure/Two-WayLinkedList/linkedlist
+END
+main.c
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/34/trunk/data_structure/Two-WayLinkedList/main.c
+END
+list.c
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/34/trunk/data_structure/Two-WayLinkedList/list.c
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/34/trunk/data_structure/Two-WayLinkedList/Makefile
+END

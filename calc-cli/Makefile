@@ -1,15 +1,20 @@
-calc: main.c libcalc.o getop.o io.o
-	cc	main.c \
-		libcalc.o \
-		getop.o \
-		io.o \
-		-o calc
+PROJECT=main.c libcalc.o getop.o io.o
+CC=cc
+RM=rm
+
+calc: $(PROJECT)
+	$(CC) -o calc \
+		$(PROJECT)
 
 libcalc.o: libcalc.c 
-	cc -c \
+	$(CC) -c \
 		libcalc.c
 
 getop.o: getop.c io.c
-	cc -c \
+	$(CC) -c \
 		getop.c \
-		io.c \
+		io.c
+
+clean:
+	$(RM) *.o
+	$(RM) calc

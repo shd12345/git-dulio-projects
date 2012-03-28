@@ -11,6 +11,7 @@ double pop(void);
 int main(void)
 {
 	int type;
+	double op1;
 	double op2;
 	char s[MAXOP];
 
@@ -37,6 +38,14 @@ int main(void)
 					push(pop()/op2);
 				else
 					printf("error: zero divisor\n");
+				break;
+			case '%':
+				op1 = pop();
+				op2 = pop();
+				if (op2 != 0.0)
+					push(op2 - (int)op2 / (int)op1 * op1 );
+				else
+					printf("erroe: zero devisor\n");
 				break;
 			case '\n':
 				printf("\t%.8g\n", pop());
