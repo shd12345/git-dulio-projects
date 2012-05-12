@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/46/trunk/data_structure/mylib
+END
+mylib.cbp
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/45/trunk/data_structure/mylib/mylib.cbp
+END
+mstdlib.c
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/46/trunk/data_structure/mylib/mstdlib.c
+END
+msort.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/40/trunk/data_structure/mylib/msort.c
+END
+mylib.layout
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/45/trunk/data_structure/mylib/mylib.layout
+END
+mdatetime.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/40/trunk/data_structure/mylib/mdatetime.c
+END
+binarytree.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/43/trunk/data_structure/mylib/binarytree.h
+END
+msort.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/40/trunk/data_structure/mylib/msort.h
+END
+mdatetime.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/40/trunk/data_structure/mylib/mdatetime.h
+END
+test.c
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/45/trunk/data_structure/mylib/test.c
+END
+mstring.c
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/38/trunk/data_structure/mylib/mstring.c
+END
+test.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/38/trunk/data_structure/mylib/test.h
+END
+mio.c
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/42/trunk/data_structure/mylib/mio.c
+END
+libtree.c
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/43/trunk/data_structure/mylib/libtree.c
+END
+sort.c
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/41/trunk/data_structure/mylib/sort.c
+END
+mylib.depend
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/45/trunk/data_structure/mylib/mylib.depend
+END

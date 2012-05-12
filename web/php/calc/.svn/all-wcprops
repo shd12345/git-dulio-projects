@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/!svn/ver/25/trunk/web/php/calc
+END
+Triangle.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/25/trunk/web/php/calc/Triangle.class.php
+END
+Rect.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/25/trunk/web/php/calc/Rect.class.php
+END
+result.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/25/trunk/web/php/calc/result.class.php
+END
+shape.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/25/trunk/web/php/calc/shape.class.php
+END
+Circle.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/25/trunk/web/php/calc/Circle.class.php
+END
+index.php
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/25/trunk/web/php/calc/index.php
+END
+form.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/25/trunk/web/php/calc/form.class.php
+END

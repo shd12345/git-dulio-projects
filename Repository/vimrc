@@ -1,0 +1,435 @@
+source $VIMRUNTIME/vimrc_example.vim
+source $VIMRUNTIME/mswin.vim
+
+behave mswin
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" VIM userinterface
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set smarttab
+set cursorline
+
+"显示行号
+set nu
+
+"设置最大列数，超出后自动换行
+set textwidth=120
+
+"设置tab=4
+set shiftwidth=4
+set sts=4
+set tabstop=4
+"tab->空格
+"set expandtab
+
+"不备份
+set nobackup
+set nowritebackup
+"set noswapfile
+
+"不要工具条
+"set guioptions-=T
+
+"颜色主题
+"colorscheme murphy
+
+"默认字体为Lucida Console，字体大小为11，粗体
+"set guifont=Lucida_Console:h10
+
+"搜索时全小写相当于不区分大小写，只要有一个大写字母出现，则区分大小写 simple idea, great achievement!
+set ignorecase smartcase
+set incsearch
+
+"启动gVIM时最大化
+au GUIEnter * simalt ~x
+
+" 进入插入模式时改变状态栏颜色（仅限于Vim 7）
+set laststatus=2 "总是显示状态栏
+if version >= 700
+ au InsertEnter * hi StatusLine guibg=#818D29 guifg=#FCFCFC gui=none
+ au InsertLeave * hi StatusLine guibg=#EEEEEE guifg=#363636 gui=none
+endif
+
+" r 确保 Vim 在回车后自动追加注释符号
+" mM 确保Vim 能在中文字符之间折行而不要求空格的存在
+set formatoptions+=rmM
+
+"设置状态栏
+set showcmd
+set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+set statusline=%F%m%r%h%w\ [POS=%04l,%04v]\ [%p%%]\ [LEN=%L]\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]
+
+"Tab complete now ignores these file types
+"set wildignore=*.o,*.obj,*.bak,*.exe,*~
+
+"Get out of VI's compatible mode..
+set nocompatible
+
+"Sets how many lines of history VIM har to remember
+set history=100
+
+"Enable filetype plugin
+filetype plugin on
+filetype indent on
+
+"Set to auto read when a file is changed from the outside
+set autoread
+
+"Have the mouse enabled all the time:
+set mouse=a
+
+"Set 4 lines to the curors - when moving vertical..
+set so=5
+
+"Turn on WiLd menu
+set wildmenu
+
+"Always show current position
+set ruler
+
+"The commandbar is 2 high
+set cmdheight=1
+
+"Do not redraw, when running macros.. lazyredraw
+"set lz
+
+"Change buffer - without saving
+"set hid
+
+"Set backspace
+set backspace=eol,start,indent
+
+"Bbackspace and cursor keys wrap to
+set whichwrap+=<,>,h,l
+
+"Set magic on
+set magic
+
+"No sound on errors.
+set noerrorbells
+set novisualbell
+set t_vb=
+
+"show matching bracets
+set showmatch
+
+"How many tenths of a second to blink
+set mat=2
+
+"Highlight search things
+set hlsearch
+
+"设置折叠
+"set foldcolumn=2
+"相同缩进构成折叠
+"set foldmethod=indent
+"手动设置折叠
+set foldmethod=manual
+"set foldlevel=10
+
+"Set mapleader
+let mapleader = ","
+let g:mapleader = ","
+
+"Fast reloading of the .vimrc
+map <silent> <leader>ss :source $vim/_vimrc<CR>
+"Fast editing of .vimrc
+map <silent> <leader>ee :e $vim/_vimrc<CR>
+"When .vimrc is edited, reload it
+autocmd! bufwritepost _vimrc source $vim/_vimrc
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Colors and Fonts
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Enable syntax hl
+syntax enable
+
+"Some nice mapping to switch syntax (useful if one mixes different languages in one file)
+map <leader>1 :set syntax=cheetah<cr>
+map <leader>2 :set syntax=xhtml<cr>
+map <leader>3 :set syntax=python<cr>
+map <leader>4 :set ft=javascript<cr>
+map <leader>$ :syntax sync fromstart<cr>
+
+autocmd BufEnter * :syntax sync fromstart
+
+"Highlight current
+if has("gui_running")
+set cursorline
+hi cursorline guibg=#333333
+hi CursorColumn guibg=#333333
+endif
+
+"Omni menu colors
+hi Pmenu guibg=#333333
+hi PmenuSel guibg=#555555 guifg=#ffffff
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Fileformats
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Favorite filetypes
+set ffs=unix,dos,mac
+"nmap <leader>fd :se ff=dos<cr>
+"nmap <leader>fu :se ff=unix<cr>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"map
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <leader>w :w!<cr>
+map ; :
+nmap <leader>f :find<cr>
+nmap <F2> :w!<CR>
+nmap <F4> <C-O>
+nmap <F5> g]
+imap <F2> <ESC>:w!<CR>i<Right>
+imap <F4> <ESC>g]i
+"imap <S-F7> <ESC>:%!xxd -r<CR>i
+
+nmap <C-F5> :set hls<CR>gd
+imap <C-F5> <ESC>:set hls<CR>gd<CR>i
+nmap <C-F6> gf
+imap <C-F6> <ESC>gf<CR>i
+
+nmap <C-F10> :set mouse=<CR>
+imap <C-F10> <ESC>:set mouse=<CR>i
+
+nmap <C-F11> :set mouse=a<CR>
+imap <C-F11> <ESC>:set mouse=a<CR>i
+
+nmap  <M-F9> :run macros/gdb_mappings.vim<CR>
+imap  <M-F9> <ESC>:run macros/gdb_mappings.vim<CR>
+
+"生成一个tags文件
+nmap <F9> <Esc>:!ctags -R *<CR>
+"nmap <F9> <Esc>:!ctags -format=2 --excmd=pattern --fields=nks --sort=no --language-force=vhdl --vhdl-types=etCfp *<CR>
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""EnhanceCommentify设置
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"注释
+nmap <silent> <F3> ,x
+vmap <silent> <F3> ,x
+imap <silent> <F3> ,x
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Visual search
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" From an idea by Michael Naumann
+function! VisualSearch(direction) range
+   let l:saved_reg = @"
+   execute "normal! vgvy"
+   let l:pattern = escape(@", '\\/.*$^~[]')
+   let l:pattern = substitute(l:pattern, "\n$", "", "")
+   if a:direction == 'b'
+   execute "normal ?" . l:pattern . "^M"
+   else
+   execute "normal /" . l:pattern . "^M"
+   endif
+   let @/ = l:pattern
+   let @" = l:saved_reg
+endfunction
+
+"Basically you press * or # to search for the current selection !! Really useful
+vnoremap <silent> * :call VisualSearch('f')<CR>
+vnoremap <silent> # :call VisualSearch('b')<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" General Autocommands
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Switch to current dir
+map <leader>cd :cd %:p:h<cr>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" General Abbrevs
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"My information
+iab xdate <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr>
+iab xname ChenYong(chenyong@vorx.com.cn)
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Text options
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+au FileType html,python,vim,javascript setl shiftwidth=4
+au FileType html,python,vim,javascript setl tabstop=4
+set lbr
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Indent
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Auto indent
+set ai
+
+"Smart indet
+set si
+
+"C-style indeting
+set cindent
+
+"Wrap lines
+set wrap
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" markbrowser setting
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <silent> <leader>mk :MarksBrowser<cr>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 获取当前路径，将$home_vim转化为~
+" 这里要在环境变量里设置：home_vim=D:\Program Files\Vim
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! CurDir()
+   let curdir = substitute(getcwd(), $home_vim, "~", "g")
+   return curdir
+endfunction
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"设置Taglist
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 这项必须设定，否则出错,配置taglist的ctags路径
+let Tlist_Ctags_Cmd = 'D:\ctags58\ctags.exe'
+
+" 使用F8打开Taglist 有winmanager所以不设置此项
+"nnoremap <silent> <F8> :TlistToggle<CR>
+
+" 不同时显示多个文件的 tag ，只显示当前文件的
+let Tlist_Show_One_File=1
+
+" 如果 taglist 窗口是最后一个窗口，则退出 vim
+let Tlist_Exit_OnlyWindow=1
+
+"让当前不被编辑的文件的方法列表自动折叠起来
+let Tlist_File_Fold_Auto_Close=1
+
+"把taglist窗口放在屏幕的右侧，缺省在左侧
+let Tlist_Use_Right_Window=1
+
+"显示taglist菜单
+let Tlist_Show_Menu=1
+"let Tlist_Max_Submenu_Items=
+"let Tlist_Max_Tag_Length=
+
+"缺省情况下，双击一个 tag，跳到该 tag 定义的位置，如果你想单击 tag 就跳转
+"let Tlist_Use_SingleClick=1
+
+"启动vim自动打开taglist
+"let Tlist_Auto_Open=1
+
+"选择了tag后自动关闭taglist窗口
+"let Tlist_Close_On_Select=1
+
+"打开taglist焦点设置在taglist窗口中
+"let Tlist_GainFocus_On_ToggleOpen=1
+
+"taglist始终解析文件中的tag，不管taglist窗口有没有打开
+"let Tlist_Process_File_Always=1
+
+"taglist窗口宽度
+"let Tlist_WinWidth=25
+
+"taglist窗口高度
+"let Tlist_WinHeight=25
+
+"窗口横向显示
+"let Tlist_Use_Horiz_Window=1
+
+"设置tags文件路径 总报错 不知道是什么错
+"set tags=D:\Program Files\Vim\vim72\tags
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"比较2个文件，文件--->分割比较
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set diffexpr=MyDiff()
+function! MyDiff()
+ let opt = '-a --binary '
+ if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
+ if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
+ let arg1 = v:fname_in
+ if arg1 =~ ' ' | let arg1 = '"' . arg1 . '"' | endif
+ let arg2 = v:fname_new
+ if arg2 =~ ' ' | let arg2 = '"' . arg2 . '"' | endif
+ let arg3 = v:fname_out
+ if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
+ let eq = ''
+ if $VIMRUNTIME =~ ' '
+   if &sh =~ '\<cmd'
+     let cmd = '""' . $VIMRUNTIME . '\diff"'
+     let eq = '"'
+   else
+     let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
+   endif
+ else
+   let cmd = $VIMRUNTIME . '\diff'
+ endif
+ silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
+endfunction
+
+""""""""""""""""""""""""""""""
+" netrw setting浏览器
+""""""""""""""""""""""""""""""
+"let g:netrw_winsize = 30
+"nmap <silent> <leader>fe :Sexplore!<cr>
+nmap <silent> <leader>fe :Explore!<cr>
+
+"""""""""""""""""""""""""""""""
+"" winManager setting
+"""""""""""""""""""""""""""""""
+"设置界面分割
+"let g:winManagerWindowLayout = "BufExplorer,FileExplorer|TagList"
+"let g:winManagerWindowLayout = "TagList|FileExplorer,BufExplorer"
+let g:winManagerWindowLayout='NERDTree|TagList,BufExplorer'
+"let g:winManagerWindowLayout='Mark|TagList'
+
+
+"在进入vim时自动打开winmanager
+let g:AutoOpenWinManager = 1
+
+"设置winmanager的宽度，默认为25
+let g:winManagerWidth = 30
+
+"定义打开关闭winmanager按键
+"nmap <silent> <F8> :WMToggle<cr><C-W>h
+nmap <silent> <F8> :WMToggle<cr>
+
+""""""""""""""""""""""""""""""""""""""""""""""
+" HDL相关
+""""""""""""""""""""""""""""""""""""""""""""""
+"建立一个库
+nmap <F6> <Esc>:!vlib work<CR>
+
+"编译一个vhd/v文件 和hdl_plugin.vim一起用
+nmap <silent> <F7> :ModSimComp<cr><cr>
+
+""""""""""""""""""""""""""""""""""""""""""""""
+""verilog/vhdl auto_complete
+""""""""""""""""""""""""""""""""""""""""""""""
+nmap          <silent>va  :Alwaypro<CR>jjwo
+nmap          <silent>vin :AddInfo<CR>
+nmap          <silent>vc  :Acontent<CR>jj$i
+nmap          <silent>ve  :VhdlEntity<CR>jjjw
+
+""""""""""""""""""""""""""""""""""""""""""""""
+""omni completion
+""""""""""""""""""""""""""""""""""""""""""""""
+"set ofu=syntaxcomplete#Complete
+"imap <silent><Tab> <C-X><C-O>
+
+""""""""""""""""""""""""""""""""""""""""""""""
+" lookupfile setting
+""""""""""""""""""""""""""""""""""""""""""""""
+let g:LookupFile_MinPatLength = 2               "最少输入2个字符才开始查找
+let g:LookupFile_PreserveLastPattern = 0        "不保存上次查找的字符串
+let g:LookupFile_PreservePatternHistory = 1     "保存查找历史
+let g:LookupFile_AlwaysAcceptFirst = 1          "回车打开第一个匹配项目
+let g:LookupFile_AllowNewFiles = 0              "不允许创建不存在的文件
+
+if filereadable("./filenametags")                "设置tag文件的名字
+   let g:LookupFile_TagExpr = '"./filenametags"'
+endif
+
+"映射LookupFile为,lk
+nmap <silent> <leader>lk :LUTags<cr>
+"映射LUBufs为,ll
+nmap <silent> <leader>ll :LUBufs<cr>
+"映射LUWalk为,lw
+nmap <silent> <leader>lw :LUWalk<cr>

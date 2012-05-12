@@ -1,0 +1,65 @@
+# depslib dependency file v1.0
+1335887948 source:d:\workspace\dulio-project\data_structure\mylib\mstring.c
+
+1335884106 d:\workspace\dulio-project\data_structure\mylib\mstring.h
+
+1336371518 source:d:\workspace\dulio-project\data_structure\mylib\test.c
+	"stdio.h"
+	"string.h"
+	"stdlib.h"
+	"stdarg.h"
+
+1336314316 
+
+1335884294 d:\workspace\dulio-project\data_structure\mylib\mstring.c
+
+1335969162 source:d:\workspace\dulio-project\data_structure\mylib\sort.c
+
+1336050983 source:/home/dulio/develop/dulio-project/data_structure/mylib/mstring.c
+
+1336058827 source:/home/dulio/develop/dulio-project/data_structure/mylib/test.c
+	"stdio.h"
+	"string.h"
+	"stdlib.h"
+
+1336050983 source:/home/dulio/develop/dulio-project/data_structure/mylib/sort.c
+
+1336052545 source:/home/dulio/develop/dulio-project/data_structure/mylib/mio.c
+	"stdio.h"
+
+1336050983 source:/home/dulio/develop/dulio-project/data_structure/mylib/msort.c
+
+1336058721 source:/home/dulio/develop/dulio-project/data_structure/mylib/mdatetime.c
+
+1336370520 source:d:\workspace\dulio-project\data_structure\mylib\mio.c
+	"stdio.h"
+	"string.h"
+	"stdlib.h"
+
+1336177850 source:d:\workspace\dulio-project\data_structure\mylib\msort.c
+
+1336177850 source:d:\workspace\dulio-project\data_structure\mylib\mdatetime.c
+
+1336314316 source:d:\workspace\dulio-project\data_structure\mylib\libtree.c
+	"stdio.h"
+
+1336050983 source:/home/dulio/develop/dulio-project/data_structure/mylib/msort.c
+
+1336050983 source:/home/dulio/develop/dulio-project/data_structure/mylib/mstring.c
+
+1336488289 source:/home/dulio/develop/dulio-project/data_structure/mylib/libtree.c
+	"stdio.h"
+
+1336060033 source:/home/dulio/develop/dulio-project/data_structure/mylib/mdatetime.c
+
+1336271179 source:/home/dulio/develop/dulio-project/data_structure/mylib/mio.c
+	"stdio.h"
+	"string.h"
+	"stdlib.h"
+
+1336488238 source:/home/dulio/develop/dulio-project/data_structure/mylib/test.c
+	"stdio.h"
+	"string.h"
+	"stdlib.h"
+	"stdarg.h"
+

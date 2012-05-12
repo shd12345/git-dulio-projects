@@ -3,6 +3,12 @@ svn:wc:ra_dav:version-url
 V 37
 /svn/!svn/ver/37/trunk/demos/calc-cli
 END
+getop.c
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/37/trunk/demos/calc-cli/getop.c
+END
 calc
 K 25
 svn:wc:ra_dav:version-url
@@ -50,10 +56,4 @@ K 25
 svn:wc:ra_dav:version-url
 V 46
 /svn/!svn/ver/37/trunk/demos/calc-cli/Makefile
-END
-getop.c
-K 25
-svn:wc:ra_dav:version-url
-V 45
-/svn/!svn/ver/37/trunk/demos/calc-cli/getop.c
 END

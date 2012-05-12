@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="libtree.c" open="0" top="0" tabpos="2">
+		<Cursor position="733" topLine="0" />
+	</File>
+	<File name="mdatetime.c" open="0" top="0" tabpos="2">
+		<Cursor position="984" topLine="23" />
+	</File>
+	<File name="mio.c" open="0" top="0" tabpos="3">
+		<Cursor position="1526" topLine="70" />
+	</File>
+	<File name="msort.h" open="0" top="0" tabpos="0">
+		<Cursor position="43" topLine="0" />
+	</File>
+	<File name="mstdlib.c" open="1" top="1" tabpos="2">
+		<Cursor position="157" topLine="0" />
+	</File>
+	<File name="mstring.c" open="0" top="0" tabpos="1">
+		<Cursor position="335" topLine="0" />
+	</File>
+	<File name="test.c" open="1" top="0" tabpos="1">
+		<Cursor position="2600" topLine="153" />
+	</File>
+</CodeBlocks_layout_file>

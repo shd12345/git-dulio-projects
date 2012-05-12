@@ -3,12 +3,6 @@ svn:wc:ra_dav:version-url
 V 42
 /svn/!svn/ver/34/trunk/data_structure/Tree
 END
-Makefile
-K 25
-svn:wc:ra_dav:version-url
-V 51
-/svn/!svn/ver/34/trunk/data_structure/Tree/Makefile
-END
 tree.c
 K 25
 svn:wc:ra_dav:version-url
@@ -26,4 +20,10 @@ K 25
 svn:wc:ra_dav:version-url
 V 49
 /svn/!svn/ver/34/trunk/data_structure/Tree/tree.h
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/34/trunk/data_structure/Tree/Makefile
 END
